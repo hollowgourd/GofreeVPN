@@ -36,7 +36,7 @@
   
 ## 2.搭建环境
 ### 2.1安装wireguard客户端<br>
-安装并运行客户端，点击“新建空隧道”，<br>
+安装并运行客户端（本仓库里面放了一个wireguard的windows客户端安装包，可自行下载），点击“新建空隧道”，<br>
 ![images](https://iili.io/HdPpmve.png)<br>
 弹开“创建新隧道”窗口<br>
 ![images](https://iili.io/Hdi3jSV.png)<br>
