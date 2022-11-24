@@ -57,7 +57,7 @@ docker run \
 在文本中需要改变两个字段的内容：<br>
 - “WG_ADMIN_PASSWORD=”后面的内容是自定义的（后续wireguard的web登录界面的用户名和口令）<br>
 - “WG_WIREGUARD_PRIVATE_KEY=”后面的内容就是前面步骤中wireguard客户端中拷贝出来的私钥<br>
-**注意拷贝私钥的时候不要多空格，拷贝完成后，即可关闭“创建新隧道”窗口**<br>
+**注意拷贝私钥的时候，前后都不要多出空格，拷贝完成后，即可关闭“创建新隧道”窗口**<br>
 
 ### 2.2VPS安装docker<br>
 VPS购买**centos 7**镜像, SSH登录(可以使用secureCRT、Xshell各种各样的SSH软件）VPS的root终端：<br>
