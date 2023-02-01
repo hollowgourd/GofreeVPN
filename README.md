@@ -20,7 +20,7 @@
 ![images](https://github.githubassets.com/images/icons/emoji/unicode/2708.png)<br>
 [NEECHIGO](https://neechigo.com)<br>
 目前只有windows客户端，测试了一段时间，还比较稳定，傻瓜式软件并完全免费。<br>
-但软件只开放了指定的一些网站可通过VPN访问。google.com是全域名可用，github可加速访问。
+但软件只开放了指定的一些网站可通过VPN访问。google.com，openai...github可加速访问。
 
 # 三、自建VPN
 
