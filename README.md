@@ -17,8 +17,7 @@
 <br>
 
 - **这里提供一个免费并简易VPN入口**<br>
-![images](https://github.githubassets.com/images/icons/emoji/unicode/2708.png)<br>
-[NEECHIGO](https://neechigo.com)<br>
+访问网站点击这里：[NEECHIGO](https://neechigo.com)<br>
 目前只有windows客户端，测试了一段时间，还比较稳定，傻瓜式软件并完全免费。<br>
 但软件只开放了指定的一些网站可通过VPN访问。google.com，openai...github可加速访问。
 
