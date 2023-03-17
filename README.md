@@ -25,7 +25,9 @@
 # 三、自建VPN
 
 这里主要讨论一下如何自建VPN，下文的方法相对比较简单，通过第三方容器的方式，对技术要求低一些：<br>
-## 1.购买VPS（云服务器）<br>
+## 1.流程说明<br>
+![images](https://iili.io/HXyXXSt.png)<br>
+## 2.购买VPS（云服务器）<br>
   i. 不需要技术背景，只要会花钱购买就行了
   VPS（云服务器）很多，选择VPS主要从性价比出发考虑。<br>
   如果预算够，最简单的方法就是直接买一台国内云服务商的海外云主机（windows系统），那就啥都解决了。<br>
@@ -41,8 +43,8 @@
 [Namecheap](https://www.namecheap.com/)<br>
 [BandwagonHost](https://bandwagonhost.com/)<br>
   
-## 2.搭建环境
-### 2.1安装wireguard客户端<br>
+## 3.搭建环境
+### 3.1安装wireguard客户端<br>
 安装并运行客户端（本仓库里面放了一个wireguard的windows客户端安装包，可自行下载），点击“新建空隧道”，<br>
 ![images](https://iili.io/HdPpmve.png)<br>
 弹开“创建新隧道”窗口<br>
@@ -66,9 +68,9 @@ docker run \
 - “WG_WIREGUARD_PRIVATE_KEY=”后面的内容就是前面步骤中wireguard客户端中拷贝出来的私钥<br>
 **注意拷贝私钥的时候，前后都不要多出空格，拷贝完成后，即可关闭“创建新隧道”窗口**<br>
 
-### 2.2VPS安装docker<br>
+### 3.2VPS安装docker<br>
 VPS购买**centos 7**镜像, SSH登录(可以使用secureCRT、Xshell各种各样的SSH软件）VPS的root终端：<br>
-#### 2.2.1安装docker<br>
+#### 3.2.1安装docker<br>
 在root终端中，直接拷贝以下整一段直接回车执行（安装过程大概两分钟）：<br>
 ```
 yum install -y yum-utils
@@ -80,7 +82,7 @@ yum install -y libseccomp-devel
 systemctl start docker
  
 ```
-#### 2.2.2获取并运行wg-access-server<br>
+#### 3.2.2获取并运行wg-access-server<br>
 输入以下整一段直接回车执行（*即前面文本文件编辑的那段字符*）：<br>
 ```
 docker run \
@@ -98,7 +100,7 @@ docker run \
 ![images](https://iili.io/HdiXAcg.png)<br>
 **看到上图中红框内容表明镜像拉取成功，否则重复尝试上面的命令。**<br>
 
-### 2.3登录wireguard后台管理界面<br>
+### 3.3登录wireguard后台管理界面<br>
 登录wireguard的管理界面，获取隧道配置文件<br>
 浏览器输入：http://IP:8000  （IP就是购买的VPS的公网IP地址）<br>
 ![images](https://iili.io/HdiOQFS.png)<br>
@@ -109,7 +111,7 @@ docker run \
 点击“CONNECTION FILE”下载wireguard配置文件到本机计算机，后续需要将这个配置文件导入wireguard客户端中。<br>
 ![images](https://iili.io/HdiSndN.png)<br>
 
-### 2.4 登录wireguard客户端
+### 3.4 登录wireguard客户端
 在客户端界面上，点击“新建隧道”，选择“从文件导入隧道”，选择刚下载的配置文件wireguard.conf文件。<br>
 ![images](https://iili.io/HdiDKAJ.png)<br>
 最后点击“连接”，然后你就获得了一条属于自己的VPN线路:)<br>
